@@ -1,0 +1,24 @@
+[tool.poetry]
+name = "chester_ml"
+version = "1.0.5"
+description = "A demo project for scikit-learn"
+authors = ["carlos de silvestri"]
+
+packages = [
+    { include = "src" }
+]
+
+[tool.poetry.dependencies]
+python = "^3.12"
+numpy = "*"
+scikit-learn = "*"
+loguru = "*"
+python-dotenv = "*"
+matplotlib = "^3.10.7"
+
+[tool.poetry.scripts]
+chester = "src.cli:main"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
