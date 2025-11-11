@@ -15,6 +15,9 @@ scikit-learn = "*"
 loguru = "*"
 python-dotenv = "*"
 matplotlib = "^3.10.7"
+sqlalchemy = "^2.0.44"
+mysql-connector-python = "^9.5.0"
+pymongo = "^4.15.4"
 
 [tool.poetry.scripts]
 chester = "src.cli:main"
