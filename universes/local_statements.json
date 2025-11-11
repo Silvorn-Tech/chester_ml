@@ -1,0 +1,7 @@
+{
+  "FILES": {
+    "load_dataset": {
+      "path": "data/local_dataset.json"
+    }
+  }
+}

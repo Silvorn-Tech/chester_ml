@@ -1,4 +1,5 @@
 import sys
+import time
 from loguru import logger
 
 def log_mode(levels: str):
@@ -28,3 +29,10 @@ def log_mode(levels: str):
 def setup_logger(log_level: str = None):
     logger.remove()
     log_mode(log_level)
+
+def dynamic_log(prefix: str, message: str, delay: float = 0.25):
+        frames = ["⠋", "⠙", "⠹", "⠸", "⠼", "⠴", "⠦", "⠧", "⠇", "⠏"]
+        for frame in frames:
+            print(f"\r{prefix} {frame} {message}", end="", flush=True)
+            time.sleep(delay / len(frames))
+        print("\r", end="")
