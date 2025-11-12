@@ -1,8 +1,8 @@
 import os
 from dotenv import load_dotenv
 from loguru import logger
-from src.providers.database_providers.sql_controller import SQLController
-from src.providers.database_providers.mongo_controller import MongoController
+from chester_ml.providers.database_providers.sql_controller import SQLController
+from chester_ml.providers.database_providers.mongo_controller import MongoController
 
 
 class RemoteEngine:

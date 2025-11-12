@@ -1,7 +1,7 @@
 from pymongo import MongoClient
-from src.interfaces.provider_interface import ProviderInterface
+from chester_ml.interfaces.provider_interface import ProviderInterface
 from loguru import logger
-from src.utils.logger_controller import dynamic_log
+from chester_ml.utils.logger_controller import dynamic_log
 
 
 class MongoController(ProviderInterface):

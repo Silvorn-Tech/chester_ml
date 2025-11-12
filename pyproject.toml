@@ -1,12 +1,11 @@
 [tool.poetry]
-name = "chester_ml"
+name = "chester-ml"
 version = "1.0.5"
-description = "A demo project for scikit-learn"
-authors = ["carlos de silvestri"]
-
-packages = [
-    { include = "src" }
-]
+description = "A CLI tool for machine learning data providers (SQL, Mongo, local files)."
+authors = ["Carlos De Silvestri <tucorreo@dominio.com>"]
+license = "MIT"
+readme = "README.md"
+packages = [{ include = "chester_ml", from = "src" }]
 
 [tool.poetry.dependencies]
 python = "^3.12"
@@ -20,7 +19,7 @@ mysql-connector-python = "^9.5.0"
 pymongo = "^4.15.4"
 
 [tool.poetry.scripts]
-chester = "src.cli:main"
+chester = "chester_ml.cli:main"
 
 [build-system]
 requires = ["poetry-core"]
