@@ -1,11 +1,22 @@
 [tool.poetry]
 name = "chester-ml"
 version = "0.1.10"
-description = "A CLI tool for machine learning data providers (SQL, Mongo, local files)."
+description = "A CLI tool for machine learning data providers (SQL, MongoDB, and local files)."
 authors = ["Carlos De Silvestri <tucorreo@dominio.com>"]
 license = "MIT"
 readme = "README.md"
 packages = [{ include = "chester_ml", from = "src" }]
+
+homepage = "https://github.com/Silvorn-Tech/chester_ml"
+repository = "https://github.com/Silvorn-Tech/chester_ml"
+keywords = ["machine learning", "cli", "data", "sql", "mongodb", "automation"]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent"
+]
 
 [tool.poetry.dependencies]
 python = "^3.12"
@@ -13,13 +24,17 @@ numpy = "*"
 scikit-learn = "*"
 loguru = "*"
 python-dotenv = "*"
-matplotlib = "^3.10.7"
+matplotlib = "^3.10.0"
 sqlalchemy = "^2.0.44"
 mysql-connector-python = "^9.5.0"
 pymongo = "^4.15.4"
 
 [tool.poetry.scripts]
 chester = "chester_ml.cli:main"
+
+[tool.poetry.group.dev.dependencies]
+build = "^1.3.0"
+twine = "^6.2.0"
 
 [build-system]
 requires = ["poetry-core"]
