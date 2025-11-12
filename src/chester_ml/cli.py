@@ -2,12 +2,12 @@ import argparse
 import os
 from loguru import logger
 from dotenv import load_dotenv
-from src.utils.logger_controller import log_mode
-from src.core import execute_providers
-from src.utils.env_controller import check_env
-from src.providers.database_providers.sql_controller import SQLController
-from src.providers.database_providers.mongo_controller import MongoController
-from src.utils.logger_controller import dynamic_log
+
+from chester_ml.utils.logger_controller import log_mode, dynamic_log
+from chester_ml.core import execute_providers
+from chester_ml.utils.env_controller import check_env
+from chester_ml.providers.database_providers.sql_controller import SQLController
+from chester_ml.providers.database_providers.mongo_controller import MongoController
 
 
 def setup_logger():
