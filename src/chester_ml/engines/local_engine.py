@@ -1,5 +1,5 @@
 from loguru import logger
-from src.providers.file_providers import FileProvider
+from chester_ml.providers.file_providers import FileProvider
 
 class LocalEngine:
     """Handles local data sources: JSON, CSV, TXT."""

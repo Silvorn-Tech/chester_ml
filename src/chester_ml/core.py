@@ -1,8 +1,8 @@
 import json
 from loguru import logger
-from src.utils.statements_loader import StatementsLoader
-from src.engines.remote_engine import RemoteEngine
-from src.engines.local_engine import LocalEngine
+from chester_ml.utils.statements_loader import StatementsLoader
+from chester_ml.engines.remote_engine import RemoteEngine
+from chester_ml.engines.local_engine import LocalEngine
 
 
 def execute_providers(providers, output_path=None):

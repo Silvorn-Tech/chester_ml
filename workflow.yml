@@ -1,0 +1,32 @@
+name: Publish to TestPyPI
+
+on:
+  release:
+    types: [published]
+
+jobs:
+  build-and-publish:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install Poetry
+        run: |
+          pip install poetry
+
+      - name: Build package
+        run: |
+          poetry build
+
+      - name: Publish to TestPyPI
+        env:
+          POETRY_PYPI_TOKEN_TESTPYPI: ${{ secrets.TEST_PYPI_TOKEN }}
+        run: |
+          poetry publish -r testpypi --build

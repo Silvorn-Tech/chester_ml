@@ -1,6 +1,6 @@
 import json
 import os
-from src.interfaces.provider_interface import ProviderInterface
+from chester_ml.interfaces.provider_interface import ProviderInterface
 from loguru import logger
 
 class FileProvider(ProviderInterface):
