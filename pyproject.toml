@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "chester-ml"
-version = "1.0.5"
+version = "0.1.10"
 description = "A CLI tool for machine learning data providers (SQL, Mongo, local files)."
 authors = ["Carlos De Silvestri <tucorreo@dominio.com>"]
 license = "MIT"
